@@ -5,8 +5,8 @@ import { Header, MarketContainer } from "./src/components";
 export default class App extends React.Component {
   render() {
     return (
-      <View>
-        <MarketContainer />
+      <View style={{flex:1}}>
+        <MarketContainer marketID="btc-clp"/>
       </View>
     );
   }

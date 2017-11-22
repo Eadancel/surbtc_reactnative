@@ -1,15 +1,16 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
+import  TextTrades  from './TextTrades.js';
 
-const Trades = () => {
+const Trades = ({buys, sales}) => {
 	return (
 		<View style={tradesContainer}>
-			<Text style={tradesBuy}>
-				# buys
-            </Text>
-            <Text style={tradesSales}>
-                # sales
-            </Text>
+			<TextTrades label={"# BUYS:"} 
+						value={buys} 
+						color={"#FF0000"} />
+			<TextTrades label={"# SALES:"} 
+						value={sales} 
+						color={"#00FF00"} />
 		</View>
 	)
 }
@@ -17,19 +18,12 @@ const Trades = () => {
 const styles = StyleSheet.create({
 	tradesContainer : {
 		display : "flex",
-		margin : 55,
+		// margin : 55,
+		flex : 1,
 		alignItems : "center"
-	},
-	tradesBuy : {
-		fontWeight: "bold",
-		fontSize : 20
-    },
-    tradesSales : {
-		fontWeight: "bold",
-		fontSize : 20
-    }
+	}
 })
 
-const { tradesContainer, tradesBuy, tradesSales } = styles;
+const { tradesContainer} = styles;
 
 export default Trades

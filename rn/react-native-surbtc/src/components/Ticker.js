@@ -1,11 +1,11 @@
 import React from 'react';
 import {View, Text, StyleSheet} from 'react-native';
 
-const Ticker = () => {
+const Ticker = ({ticker_value}) => {
 	return (
 		<View style={tickerContainer}>
 			<Text style={tickerText}>
-				4.4 M
+				{ticker_value}
 			</Text>
 		</View>
 	)
@@ -14,12 +14,14 @@ const Ticker = () => {
 const styles = StyleSheet.create({
 	tickerContainer : {
 		display : "flex",
-		margin : 55,
+		// margin : 55,
+		flex : 2,
 		alignItems : "center"
 	},
 	tickerText : {
 		fontWeight: "bold",
-		fontSize : 20
+		fontSize : 100,
+		color : "#00ff00"
 	}
 })
 
