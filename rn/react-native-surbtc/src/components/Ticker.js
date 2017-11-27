@@ -7,7 +7,7 @@ const Ticker = ({ticker, variation}) => {
 	var ticker_value = parseInt(ticker);
 	var variation_value = parseFloat(variation);
 
-	var ticker_text = numeral(ticker_value).format('$ 0.0 a');
+	var ticker_text = numeral(ticker_value).format('0.0a');
 	var variation_text = numeral(variation_value).format('0.00%');
 	return (
 		<View style={tickerContainer}>
@@ -25,18 +25,20 @@ const styles = StyleSheet.create({
 	tickerContainer : {
 		display : "flex",
 		// margin : 55,
-		flex : 2,
+		backgroundColor : "#777777",
+		flex : 3,
 		alignItems : "center"
 	},
 	tickerText : {
-		fontWeight: "bold",
-		fontSize : 100,
-		color : "#00ff00"
+		fontWeight: '700',
+		fontSize : 130,
+		color : "#7ED321",
+		fontFamily : 'Arial'
 	},
 	variationText : {
 		fontWeight: "bold",
 		fontSize : 40,
-		color : "#00ff00"
+		color : "#7ED321"
 	}
 })
 

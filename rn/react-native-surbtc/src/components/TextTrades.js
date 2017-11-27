@@ -26,14 +26,14 @@ const styles = StyleSheet.create({
 	label :{
 		fontWeight: "bold",
 		flex : 1,
-		fontSize : 40,
+		fontSize : 30,
 		// color : {color},
 		
 	},
 	value :{
 		flex : 1,
 		fontWeight: "bold",
-		fontSize : 40,
+		fontSize : 30,
 		// color : {color},
 		textAlign :"right"
 	},
